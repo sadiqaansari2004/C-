@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+
+void increment(int& n){   // pass by reference
+    n++;
+}
+
+void increment1(int *k){
+    (*k)++;
+}
+int main(){
+    int i=10; 
+    increment(i);
+    cout<< i<<endl;
+
+    int j=100;
+    increment1(&j);// can also pass by reference like this
+    cout<< j<<endl;
+    return 0;
+}
